@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* GLOBAL */
+:root {
+  --clr: #0065fc;
+  --alt-clr: #deebff;
+  --bg-clr: #f2f2f2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+  padding: 0 20px;
+}
+
+i {
+  color: var(--clr);
+}
+
+i.clr-black {
+  color: black;
+}
+
+i.fa-info {
+  border: 1px solid var(--bg-clr);
+  border-radius: 50%;
+  padding: 7px 12px;
+  margin-right: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more {
+  border: none;
+  font-weight: bold;
+}
+
+.search {
+  background: var(--clr);
+  border: 0 0 1px 1px;
+  border-radius: 10px;
+}
+
+footer {
+  background: var(--bg-clr);
+  display: flex;
+  flex-flow: row wrap;
+  /* display: grid; */
+  /* grid-column-gap: 20px; */
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.navbar-btm {
+  width: calc(80% / 3);
+}
+
+.navbar-btm a {
+  display: block;
+  padding-bottom: 1em;
+}
+
+.tags {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag {
+  transition: all 0.5s ease;
+  background: white;
+  border: 1px solid var(--bg-clr);
+  border-radius: 15px;
+  margin-left: 2em;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0 10px 0 5px;
+}
+
+.tag i {
+  position: relative;
+  top: 0;
+  left: -8px;
+  background: var(--alt-clr);
+  border-radius: 50%;
+  padding: 8px 9px;
+}
+
+.tag:hover {
+  background: var(--alt-clr);
+}
+
+/* LODGING */
+
+#lodging {
+  display: flex;
+  width: 100vw;
+}
+#lodging .bloc {
+  margin: 20px 10px;
+  background: var(--bg-clr);
+}
+
+#lodging .bloc:first-of-type {
+  width: 80vw;
+}
+
+#lodging .bloc:first-of-type .cards {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc(100% / 3);
+}
+
+#lodging .bloc:last-of-type {
+  width: 20vw;
+}
+
+#lodging .bloc:last-of-type .cards {
+  display: block;
+}
+
+.card-lodging .img-wrapper {
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-lodging img {
+  height: auto;
+}
+
+.card-popular {
+  width: 150px;
+  height: 150px;
+}
+
+.card-popular img {
+  width: 100px;
+}
+
+/* ACTIVITIES */
+
+.masonry {
+  columns: 1;
+  column-gap: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .masonry {
+    columns: 2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    columns: 4;
+  }
+}
+.card-activities {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+
+.card-activities .img-wrapper {
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-activities img {
+  height: auto;
+}
+
+
+/* LODGING & ACTIVITIES */
+.bloc {
+  padding: 1em 2em;
+  border-radius: 15px;
+}
+
+.cards {
+  border: 1px solid red;
+  display: flex;
+}
+
+.card {
+  transition: box-shadow 0.3s;
+  background: white;
+  margin: 20px 10px;
+  border: 5px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  /* 
+  width: 250px; */
+  height: 250px;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+
+.low-price {
+  font-weight: bold;
+}

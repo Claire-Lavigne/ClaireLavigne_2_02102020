@@ -7,22 +7,22 @@
   --alt-clr: #f2f2f2;
 }
 
+* {
+  font-family: "Raleway", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-size: 16px;
-  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-main {
-  padding: 0 20px;
-}
 
 i {
   color: var(--clr);
@@ -32,74 +32,8 @@ i.clr-black {
   color: black;
 }
 
-i.fa-info {
-  border: 1px solid var(--alt-clr);
-  border-radius: 50%;
-  padding: 7px 12px;
-  margin-right: 1em;
-}
-
 a {
   text-decoration: none;
-}
-
-.show-more {
-  border: none;
-  font-weight: bold;
-}
-
-.search {
-  background: var(--clr);
-  border: 0 0 1px 1px;
-  border-radius: 10px;
-}
-
-footer {
-  padding: 0 20px;
-  background: var(--alt-clr);
-  display: flex;
-  flex-flow: row wrap;
-  /* display: grid; */
-  /* grid-column-gap: 20px; */
-  /* grid-template-columns: repeat(3, 1fr); */
-}
-
-.navbar-btm {
-  width: calc(80% / 3);
-}
-
-.navbar-btm a {
-  display: block;
-  padding-bottom: 1em;
-}
-
-.tags {
-  display: inline-flex;
-  align-items: center;
-}
-
-.tag {
-  transition: all 0.5s ease;
-  background: white;
-  border: 1px solid var(--alt-clr);
-  border-radius: 15px;
-  margin-left: 2em;
-  font-weight: bold;
-  text-transform: capitalize;
-  padding: 0 10px 0 5px;
-}
-
-.tag i {
-  position: relative;
-  top: 0;
-  left: -8px;
-  background: var(--clr-ltr);
-  border-radius: 50%;
-  padding: 8px 9px;
-}
-
-.tag:hover {
-  background: var(--clr-ltr);
 }
 
 /* HEADER */
@@ -157,6 +91,64 @@ h1 div {
   font-size: 16px;
   font-weight: normal;
 }
+.tags {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .tags {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.tag {
+  transition: all 0.5s ease;
+  background: white;
+  border: 1px solid var(--alt-clr);
+  border-radius: 15px;
+  margin: 1em;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0 10px 0 5px;
+}
+@media only screen and (min-width: 768px) {
+  .tag {
+    margin: 0 0 0 2em;
+  }
+}
+
+.tag i {
+  position: relative;
+  left: -8px;
+  background: var(--clr-ltr);
+  border-radius: 50%;
+  padding: 8px 9px;
+}
+
+.tag:hover {
+  background: var(--clr-ltr);
+}
+
+i.fa-info {
+  border: 1px solid var(--alt-clr);
+  border-radius: 50%;
+  padding: 7px 12px;
+  margin-right: 1em;
+}
+.show-more {
+  padding: 1em 0;
+  font-size: 18px;
+  border: none;
+  font-weight: bold;
+  background: none;
+  cursor: pointer;
+}
+
+.search {
+  background: var(--clr);
+  border: 0 0 1px 1px;
+  border-radius: 10px;
+}
 
 form {
   height: 50px;
@@ -182,7 +174,7 @@ form .fa-map-marker-alt {
 }
 
 form .search-icon {
-  margin-right: 0;
+  float: right;
   border: none;
   border-radius: 15px;
   background: var(--clr);
@@ -204,51 +196,173 @@ form .search {
     display: none;
   }
 }
+
+/* LODGING & ACTIVITIES */
+.bloc {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .bloc {
+    padding: 1em 2em;
+    border-radius: 15px;
+  }
+}
+
+.cards {
+  border: 1px solid red;
+  display: flex;
+}
+
+.card {
+  box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
+  transition: box-shadow 0.3s;
+  background: white;
+  margin: 20px 10px;
+  border: 5px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  /* 
+  width: 250px; */
+  height: 250px;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(33, 33, 33, 0.2);
+}
+
+.low-price {
+  font-weight: bold;
+}
+
+.star-empty {
+  color: var(--clr-ltr);
+}
+
 /* LODGING */
 
 #lodging {
   display: flex;
+  flex-flow: row wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  #lodging {
+    margin: 20px 0;
+  }
+}
+
+#lodging .bloc {
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #lodging .bloc {
+    margin: 20px 10px;
+    background: var(--alt-clr);
+  }
+}
+
+/* city */
+.bloc-city {
   width: 100vw;
 }
-#lodging .bloc {
-  margin: 20px 10px;
-  background: var(--alt-clr);
+
+@media only screen and (min-width: 768px) {
+  .bloc-city {
+    width: 60%;
+  }
 }
 
-#lodging .bloc:first-of-type {
-  width: 80vw;
-}
-
-#lodging .bloc:first-of-type .cards {
+.bloc-city .cards {
   display: flex;
   flex-flow: row wrap;
-  width: calc(100% / 3);
 }
 
-#lodging .bloc:last-of-type {
-  width: 20vw;
+@media only screen and (min-width: 768px) {
+  .bloc-city .cards {
+    width: calc(100% / 3);
+  }
 }
 
-#lodging .bloc:last-of-type .cards {
+.card-city {
+  margin: 10px 0;
+}
+
+.card-city .img-wrapper {
+  height: 150px;
+  width: 100%;
+  margin: 0;
+}
+
+.card-city img {
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+}
+
+.card-city .text-wrapper {
+  padding: 1em;
+}
+
+.card-city h3,
+.card-city p {
+  margin: 0.5em 0;
+  margin-top: 0;
+}
+
+/* popular */
+.bloc-popular {
+  background: var(--alt-clr);
+  order: -1;
+  width: 100vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .bloc-popular {
+    order: 0;
+    width: 20%;
+  }
+}
+
+.bloc-popular .fa-chart-line {
+  float: right;
+}
+
+.bloc-popular .cards {
   display: block;
-}
-
-.card-lodging .img-wrapper {
-  height: 100px;
-  overflow: hidden;
-}
-
-.card-lodging img {
-  height: auto;
+  width: 100%;
 }
 
 .card-popular {
-  width: 150px;
+  display: flex;
+  margin: 20px 0;
   height: 150px;
+  min-width: 300px;
+}
+
+.card-popular .img-wrapper {
+  height: 100%;
+  width: 150px;
+  margin: 0;
 }
 
 .card-popular img {
-  width: 100px;
+  object-fit: cover;
+  width: 150px;
+  height: 100%;
+}
+
+.card-popular .text-wrapper {
+  padding: 1em;
+  padding-top: 0;
+  margin: 0;
+  position: relative;
+}
+
+.card-popular .vote {
+  position: absolute;
+  bottom: 10px;
 }
 
 /* ACTIVITIES */
@@ -282,33 +396,22 @@ form .search {
   height: auto;
 }
 
-/* LODGING & ACTIVITIES */
-.bloc {
-  padding: 1em 2em;
-  border-radius: 15px;
-}
-
-.cards {
-  border: 1px solid red;
+/* FOOTER */
+footer {
+  padding: 0 20px;
+  background: var(--alt-clr);
   display: flex;
+  flex-flow: row wrap;
+  /* display: grid; */
+  /* grid-column-gap: 20px; */
+  /* grid-template-columns: repeat(3, 1fr); */
 }
 
-.card {
-  transition: box-shadow 0.3s;
-  background: white;
-  margin: 20px 10px;
-  border: 5px solid white;
-  border-radius: 15px;
-  overflow: hidden;
-  /* 
-  width: 250px; */
-  height: 250px;
+.navbar-btm {
+  width: calc(80% / 3);
 }
 
-.card:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
-
-.low-price {
-  font-weight: bold;
+.navbar-btm a {
+  display: block;
+  padding-bottom: 1em;
 }

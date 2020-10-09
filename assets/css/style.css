@@ -23,7 +23,6 @@ body {
   box-sizing: border-box;
 }
 
-
 i {
   color: var(--clr);
 }
@@ -216,7 +215,7 @@ form .search {
 }
 
 .card {
-  box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
+  box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
   transition: box-shadow 0.3s;
   background: white;
   margin: 20px 10px;
@@ -229,7 +228,7 @@ form .search {
 }
 
 .card:hover {
-  box-shadow: 0 0 15px rgba(33, 33, 33, 0.2);
+  box-shadow: 2px 2px 12px rgba(61, 40, 40, 0.4);
 }
 
 .low-price {
@@ -276,15 +275,14 @@ form .search {
 }
 
 .bloc-city .cards {
-  display: flex;
   flex-flow: row wrap;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .bloc-city .cards {
     width: calc(100% / 3);
   }
-}
+} */
 
 .card-city {
   margin: 10px 0;
@@ -368,6 +366,20 @@ form .search {
 
 /* ACTIVITIES */
 
+#activities {
+  display: grid;
+}
+
+#activities .bloc {
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #activities .bloc {
+    margin: 20px 10px;
+  }
+}
+
 .masonry {
   columns: 1;
   column-gap: 20px;
@@ -383,18 +395,27 @@ form .search {
   }
 }
 .card-activities {
+  border: none;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin: 10px 0;
+  /* margin-bottom: 20px; */
 }
 
 .card-activities .img-wrapper {
-  height: 100px;
-  overflow: hidden;
+  height: 180px;
+  width: 100%;
+  margin: 0;
 }
 
 .card-activities img {
-  height: auto;
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+}
+
+.card-activities .text-wrapper {
+  margin: 1em;
 }
 
 /* FOOTER */
@@ -403,13 +424,10 @@ footer {
   background: var(--alt-clr);
   display: flex;
   flex-flow: row wrap;
-  /* display: grid; */
-  /* grid-column-gap: 20px; */
-  /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .navbar-btm {
-  width: calc(80% / 3);
+  width: 300px;
 }
 
 .navbar-btm a {

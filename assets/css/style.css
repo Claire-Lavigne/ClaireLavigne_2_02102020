@@ -58,7 +58,7 @@ a {
   padding: 1em;
   color: black;
   border-bottom: 3px solid var(--clr-ltr);
-  transition: border-bottom 0.5s ease;
+  transition: border 0.5s ease;
 }
 .navbar .main-nav a:hover {
   font-weight: 600;
@@ -329,6 +329,26 @@ footer {
 /* ______TABLETS________ */
 
 @media only screen and (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .navbar .main-nav {
+    margin-left: auto;
+    display: inline-flex;
+    width: 40%;
+    order: unset;
+  }
+  .navbar .main-nav a {
+    padding: 2em;
+    border-bottom: none;
+    border-top: 3px solid transparent;
+  }
+  .navbar .main-nav a:hover {
+    border-bottom: none;
+    border-top: 3px solid var(--clr);
+  }
+
   .tags {
     display: inline-flex;
     align-items: center;

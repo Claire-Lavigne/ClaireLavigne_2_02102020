@@ -9,6 +9,7 @@
 
 * {
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  box-sizing: border-box;
 }
 
 i {
@@ -390,8 +390,64 @@ footer {
   #activities .bloc {
     margin: 20px 10px;
   }
+  
   .masonry {
-    columns: 2;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .pattern-3-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "big medium"
+      "big small";
+  }
+  .pattern-3-cards-inverted {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1.5fr;
+    gap: 20px;
+    grid-template-areas:
+      "big small"
+      "big medium";
+  }
+  .big {
+    grid-area: big;
+    /* height: 500px; */
+    height: 100%;
+  }
+  .medium {
+    grid-area: medium;
+    height: 75%;
+    /* height: 300px; */
+  }
+  .small {
+    grid-area: small;
+    height: 25%;
+    /* height: 200px; */
+  }
+
+  .card-activities .img-wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .card-activities img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .big img {
+    height: 450px;
+  }
+  .medium img {
+    height: 250px;
+  }
+  .small img {
+    height: 150px;
   }
 }
 
@@ -427,30 +483,6 @@ footer {
   .card-popular {
     margin: 20px 0;
     width: 100%;
-  }
-
-  .masonry {
-    display: flex;
-  }
-
-  .card-activities {
-    width: 300px;
-  }
-
-  .card-activities:nth-of-type(7n+1),
-  .card-activities:nth-of-type(7n+4) {
-    height: 500px;
-    border: 1px solid red;
-  }
-  .card-activities:nth-of-type(7n+2),
-  .card-activities:nth-of-type(7n+6) {
-    height: 250px;
-    border: 1px solid blue;
-  }
-  .card-activities:nth-of-type(7n+3),
-  .card-activities:nth-of-type(7n+5) {
-    height: 200px;
-    border: 1px solid green;
   }
 
   .navbar-btm {

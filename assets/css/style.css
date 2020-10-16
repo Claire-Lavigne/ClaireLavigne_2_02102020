@@ -430,7 +430,27 @@ footer {
   }
 
   .masonry {
-    columns: 4;
+    display: flex;
+  }
+
+  .card-activities {
+    width: 300px;
+  }
+
+  .card-activities:nth-of-type(7n+1),
+  .card-activities:nth-of-type(7n+4) {
+    height: 500px;
+    border: 1px solid red;
+  }
+  .card-activities:nth-of-type(7n+2),
+  .card-activities:nth-of-type(7n+6) {
+    height: 250px;
+    border: 1px solid blue;
+  }
+  .card-activities:nth-of-type(7n+3),
+  .card-activities:nth-of-type(7n+5) {
+    height: 200px;
+    border: 1px solid green;
   }
 
   .navbar-btm {

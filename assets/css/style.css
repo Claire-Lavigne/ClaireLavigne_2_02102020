@@ -216,6 +216,7 @@ form .search {
 }
 #lodging .bloc {
   margin: 1em 0;
+  width: 100%;
 }
 
 .bloc-city .cards,
@@ -302,11 +303,11 @@ form .search {
   display: inline-block;
   vertical-align: top;
   margin: 10px 0 20px;
+  width: 100%;
 }
 .card-activities .img-wrapper {
   height: 190px;
   width: 100%;
-  max-width: 711px;
   margin: 0;
 }
 .card-activities img {
@@ -404,6 +405,10 @@ footer {
     background: var(--alt-clr);
   }
 
+  .bloc-city {
+    width: 100%;
+  }
+
   .bloc-city .cards,
   .bloc-popular .cards {
     display: grid;
@@ -488,8 +493,8 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
   .card-city h3 {
-  font-size: 15px;
-}
+    font-size: 15px;
+  }
 
   .bloc-popular .cards {
     display: grid;

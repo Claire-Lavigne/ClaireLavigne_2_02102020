@@ -81,7 +81,7 @@ a {
 }
 
 h1 {
-  margin-right:1em;
+  margin-right: 1em;
   font-size: 22px;
   font-weight: bolder;
 }
@@ -337,11 +337,10 @@ footer {
 /* ______TABLETS________ */
 
 @media only screen and (min-width: 768px) {
-
-header,
-main {
-  margin: 0 2em;
-}
+  header,
+  main {
+    margin: 0 2em;
+  }
 
   .navbar {
     justify-content: space-between;
@@ -467,20 +466,18 @@ main {
     margin: 0.5em;
   }
 
-
-footer {
-  padding: 2em 3em;
-}
+  footer {
+    padding: 2em 3em;
+  }
 }
 
 /* ______DESKTOPS________ */
 
 @media only screen and (min-width: 1224px) {
-  
   .tag {
     margin: 0 0 0 2em;
   }
-  
+
   #lodging {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -490,6 +487,9 @@ footer {
   .bloc-city .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+  .card-city h3 {
+  font-size: 15px;
+}
 
   .bloc-popular .cards {
     display: grid;

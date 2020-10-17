@@ -94,8 +94,11 @@ h1 span {
 
 .tags {
   display: block;
+  margin: 2em 0;
 }
-
+.tags h2 {
+  font-size: 16px;
+}
 .tag {
   transition: all 0.5s ease;
   background: white;
@@ -317,7 +320,7 @@ form .search {
 
 /* FOOTER */
 footer {
-  padding: 0 20px;
+  padding: 20px;
   background: var(--alt-clr);
   display: flex;
   flex-flow: row wrap;
@@ -334,6 +337,12 @@ footer {
 /* ______TABLETS________ */
 
 @media only screen and (min-width: 768px) {
+
+header,
+main {
+  margin: 0 2em;
+}
+
   .navbar {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -360,7 +369,11 @@ footer {
   }
 
   .tag {
-    margin: 0 0 0 2em;
+    margin: 0 0 0 0.5em;
+  }
+
+  form {
+    max-width: 400px;
   }
 
   form .search {
@@ -368,7 +381,7 @@ footer {
     float: right;
     color: white;
     font-weight: bold;
-    padding: 1.3em;
+    padding: 16px;
     background: var(--clr);
     border: none;
     border-radius: 0 10px 10px 0;
@@ -399,7 +412,8 @@ footer {
   }
 
   #activities .bloc {
-    margin: 20px 10px;
+    margin: 20px 0;
+    padding: 1em;
   }
 
   .masonry {
@@ -452,11 +466,21 @@ footer {
   .card-activities h3 {
     margin: 0.5em;
   }
+
+
+footer {
+  padding: 2em 3em;
+}
 }
 
 /* ______DESKTOPS________ */
 
 @media only screen and (min-width: 1224px) {
+  
+  .tag {
+    margin: 0 0 0 2em;
+  }
+  
   #lodging {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -487,6 +511,7 @@ footer {
 
   .card-activities h3 {
     margin: 1em 0.5em;
+    font-size: 16px !important;
   }
 
   .navbar-btm {

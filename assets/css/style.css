@@ -506,6 +506,10 @@ footer {
     font-size: 15px;
   }
 
+.show-more {
+  padding-top: 2em;
+}
+
   .bloc-popular .cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -520,6 +524,9 @@ footer {
     margin: 20px 0;
     width: 100%;
   }
+
+  
+
   .masonry {
     grid-template-columns: repeat(2, 1fr);
   }

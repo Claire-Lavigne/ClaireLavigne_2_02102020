@@ -1,6 +1,6 @@
 # Réservia | Projet 2
 
-- HTML5 + CS3
+- HTML5 + CSS3
 - Responsive :
   - Mobiles : 320px
   - Tablets : 768px

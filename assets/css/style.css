@@ -153,7 +153,7 @@ form {
 form input {
   font-weight: bold;
   border: none;
-  padding: 1em;
+  padding: 0.5em 1em;
   font-size: 16px;
 }
 form input:focus {

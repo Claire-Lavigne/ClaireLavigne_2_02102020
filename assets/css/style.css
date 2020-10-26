@@ -418,13 +418,13 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-.card-city {
+  .card-city {
     height: 220px;
-}
-.card-city .img-wrapper,
-.card-city img {
-  height: 120px;
-}
+  }
+  .card-city .img-wrapper,
+  .card-city img {
+    height: 120px;
+  }
   #activities .bloc {
     margin: 20px 0;
     padding: 1em;
@@ -506,9 +506,9 @@ footer {
     font-size: 15px;
   }
 
-.show-more {
-  padding-top: 2em;
-}
+  .show-more {
+    padding-top: 2em;
+  }
 
   .bloc-popular .cards {
     display: grid;
@@ -524,8 +524,6 @@ footer {
     margin: 20px 0;
     width: 100%;
   }
-
-  
 
   .masonry {
     grid-template-columns: repeat(2, 1fr);
